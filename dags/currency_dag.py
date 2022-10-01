@@ -32,7 +32,7 @@ with DAG(
         dag_id="currency",
         description="Fetches currency of Iene, Euro and Pound",
         start_date=dt.datetime(2022, 10, 1),
-        schedule_interval="30 * * * *",
+        schedule_interval="30 * * * 1-5",
         catchup=False
 ) as dag:
     star_dag = DummyOperator(task_id='begin')
